@@ -59,7 +59,7 @@ BTree createMorseBTree(BTree morseBtree)
 	nodeH->right = insertRight(&morseBtree, '4', nodeH);
 	nodeV->right = insertRight(&morseBtree, '3', nodeV);
 	nodeSpace->right = insertRight(&morseBtree, '2', nodeSpace);
-	nodeR->right->left = insertLeft(&morseBtree, '+', nodeR->right);
+	nodeR->right->left = insertLeft(&morseBtree, ' ', nodeR->right);
 	nodeJ->right = insertRight(&morseBtree, '1', nodeJ);
 	nodeB->left = insertLeft(&morseBtree, '6', nodeB);
 	nodeB->right = insertRight(&morseBtree, '=', nodeB);
@@ -160,7 +160,7 @@ void printWordtoMorse(BTree *tree, char *kalimat)
 		{
 			c = *(kalimat + i);
 			
-			if(c == ' ' || c == '\morseBtree')
+			if(c == '\morseBtree')
 			{
 				printf(" [whitespace] ");
 			}
